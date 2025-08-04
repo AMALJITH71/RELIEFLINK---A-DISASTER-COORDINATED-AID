@@ -1,0 +1,90 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+        background: white;
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+
+    tr:hover {
+        background: #e9ecef;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        object-fit: cover;
+        border: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+        table {
+            min-width: 100%;
+        }
+        th, td {
+            padding: 8px;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+</style>
+
+<div class="table-container">
+    <table>
+        <h3 align="center">Missings</h3>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Image</th>
+            <th>Description</th>
+        </tr>
+        {% for i in view %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.Name }}</td>
+            <td>{{ i.Age }}</td>
+            <td>{{ i.Gender }}</td>
+            <td><img src="{{ i.Image }}" alt="Image"></td>
+            <td>{{ i.Description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

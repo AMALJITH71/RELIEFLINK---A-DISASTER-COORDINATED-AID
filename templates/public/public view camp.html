@@ -1,0 +1,120 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        .track-btn {
+            padding: 5px 10px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .track-btn:hover {
+            background: #218838;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                min-width: 100%;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Camp List</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Sl.No</th>
+                <th>Name</th>
+                <th>Place</th>
+                <th>Contact</th>
+                <th>Location</th>
+            </tr>
+            {% for i in view %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.camp_name }}</td>
+                <td>{{ i.place }}</td>
+                <td>{{ i.Contact_no }}</td>
+                <td>
+                    <a href="http://www.google.com/maps/?q={{ i.Latitude }},{{ i.Longitude }}" class="track-btn" target="_blank">
+                        Track
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

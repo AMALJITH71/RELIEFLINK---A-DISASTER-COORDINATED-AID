@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="869" border="1">
+  <tr>
+    <th width="36" scope="col">S.no</th>
+    <th width="45" scope="col">Name</th>
+    <th width="44" scope="col">Address</th>
+    <th width="53" scope="col">Phone</th>
+    <th width="64" scope="col">E-mail</th>
+    <th width="97" scope="col">Location</th>
+      <th width="140" scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}&nbsp;</td>
+    <td>{{ i.Name }}&nbsp;</td>
+      <td>{{ i.Place }}&nbsp;<br>{{ i.Pin }}&nbsp<br>{{ i.Post }}&nbsp;</td>
+    <td>{{ i.Phone }}&nbsp;</td>
+    <td>{{ i.Email }}&nbsp;</td>
+    <td>{<a href="https://www.google.com/maps/?q={{ i.Latitude }},{{ i.longitude }}">track</a>&nbsp;</td>
+      <td><a href="/updatepolice/{{ i.id }}">Edit</a><br /><a href="/delete_police/{{ i.id }}">Delete</a></td>
+  </tr>
+     {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">sl.no</th>
+{#    <th scope="col">item</th>#}
+    <th scope="col">user info</th>
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+{#    <td>&nbsp;{{ i.REQUIREMENT.Itemrequired }}</td>#}
+    <td>&nbsp;name:{{ i.USER.Name }}<br>email:{{ i.USER.Email }}</td>
+    <td><a href="/allocate_collection/{{ i.id }}">allocate collection to volunteer</a> </td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

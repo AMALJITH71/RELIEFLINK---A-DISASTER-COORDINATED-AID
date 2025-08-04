@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">sl.no</th>
+    <th scope="col">Diasater category</th>
+    <th scope="col">Description</th>
+    <th scope="col">place</th>
+    <th scope="col">area</th>
+    <th scope="col">time</th>
+    <th scope="col"></th>
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{ i.Disastercategory }}</td>
+    <td>&nbsp;{{ i.Description }}</td>
+    <td>&nbsp;{{ i.Place }}</td>
+    <td>&nbsp;{{ i.Area }}</td>
+    <td>&nbsp;{{ i.Time }}</td>
+    <td><a href="/user_edit_alert/{{ i.id }}">edit</a><br><a href="/user_delete_alert/{{ i.id }}">delete</a> </td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

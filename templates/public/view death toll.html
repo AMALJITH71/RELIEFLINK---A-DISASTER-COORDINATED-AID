@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .heading-container {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+        background: white;
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background: #dc3545;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+
+    tr:hover {
+        background: #e9ecef;
+    }
+
+    .table-title {
+        background-color: #dc3545;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+    }
+
+    @media (max-width: 768px) {
+        table {
+            min-width: 100%;
+        }
+        th, td {
+            padding: 8px;
+        }
+    }
+</style>
+
+<div class="table-container">
+    <table>
+            <h3 colspan="4" align="center">Disaster Report</h3>
+        <tr>
+            <th>Sl.No</th>
+            <th>Disaster Type</th>
+            <th>Death Count</th>
+            <th>Date</th>
+        </tr>
+        {% for i in view %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.DisasterType }}</td>
+            <td>{{ i.DeathCount }}</td>
+            <td>{{ i.Date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

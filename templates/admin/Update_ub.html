@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/updateub_updatebuttonclick/{{ data.id }}" method="post">
+<table width="320" border="1">
+  <tr>
+    <th width="179" scope="row">Camp </th>
+    <td width="52">
+      <label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5"  value="{{ data.CAMP.camp_name}}" readonly/>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Area</th>
+    <td>
+      <label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"  value="{{ data.Area}}"/>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Hospital</th>
+    <td>
+      <label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6"  value="{{ data.HOSPITAL.Name}}" readonly/>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Male</th>
+    <td>
+      <label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data.Male}}" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Female</th>
+    <td>
+      <label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" value="{{ data.Female}}" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Kids</th>
+    <td>
+      <label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" value="{{ data.Kids}}" />
+    </td>
+  </tr>
+  <tr>
+    <th height="40" colspan="2" scope="row">
+      <input type="submit" name="button" id="button" value="Update" />
+    </th>
+  </tr>
+</table>
+</form>
+</body>
+</html>

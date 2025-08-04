@@ -1,0 +1,123 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #dc3545; /* Red Theme */
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        .track-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .track-btn:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                min-width: 100%;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Disaster Information</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Sl.No</th>
+                <th>Category</th>
+                <th>Information</th>
+                <th>Area</th>
+                <th>Location</th>
+            </tr>
+            {% for i in view %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.DisasterCategory }}</td>
+                <td>{{ i.information }}</td>
+                <td>{{ i.Area }}</td>
+                <td>
+                    <a href="http://google.com/maps/?q={{ i.Latitude }},{{ i.Longitude }}" target="_blank" class="track-btn">
+                        Track
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

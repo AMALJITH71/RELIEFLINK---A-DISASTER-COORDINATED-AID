@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/user_edit_alert_post/{{ data.id }}" method="post">
+  <table width="200" border="1">
+  <tr>
+    <th scope="row">Disaster Category</th>
+    <td><label for="textfield"></label>
+      <input type="text" name="cat" id="textfield" value="{{ data.Disastercategory }}" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">Description</th>
+    <td><textarea name="dec" id="textarea" cols="45" rows="5">{{ data.Description }}</textarea></td>
+  </tr>
+  <tr>
+    <th scope="row">Area</th>
+    <td><input type="text" name="textfield2" id="textfield2" value="{{ data.Area }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">Place</th>
+    <td><input type="text" name="place" id="textfield3" value="{{ data.Place }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Time</th>
+    <td><input type="time" name="time" id="textfield4"  value="{{ data.Time }}" /></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Update" /></th>
+    </tr>
+
+  </table>
+</form>
+</body>
+</html>

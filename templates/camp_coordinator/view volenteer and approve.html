@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">sl.no</th>
+    <th scope="col">name</th>
+    <th scope="col">email</th>
+    <th scope="col">phone</th>
+    <th scope="col">address</th>
+    <th scope="col">skill</th>
+    <th scope="col">id proof</th>
+    <th scope="col">image</th>
+    <th scope="col">gender</th>
+    <th scope="col">approve/reject</th>
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>&nbsp;{{ i.Name }}</td>
+    <td>&nbsp;{{ i.Email }}</td>
+    <td>&nbsp;{{ i.Contact_no }}</td>
+    <td>&nbsp;{{ i.pin }},{{ i.Place }},{{ i.post }}</td>
+    <td>&nbsp;{{ i.Skill }}</td>
+    <td><a href="{{ i.Id_proof }}">view</a></td>
+    <td>&nbsp;<img src="{{ i.Image }}" height="100" width="100"> </td>
+    <td>&nbsp;{{ i.Gender }}</td>
+    <td><p><a href="/approve_volunteer/{{ i.LOGIN.id }}">approve</a></p>
+    <p><a href="/reject_volunteer/{{ i.LOGIN.id }}">reject</a></p></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

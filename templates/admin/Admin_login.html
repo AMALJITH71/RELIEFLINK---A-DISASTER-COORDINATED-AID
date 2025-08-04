@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefLink - Login</title>
+    <style>
+        body {
+            background: url('/static/assets/img/disaster-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.3);
+        }
+
+        .login-container h2 {
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 100%;
+            background: #ff9800;
+            color: #1b1b1b;
+            padding: 12px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e68900;
+        }
+
+        .links {
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login to ReliefLink</h2>
+    <form action="/login_buttonclick" method="post">
+        <input type="text" name="textfield" placeholder="Username" class="input-field" required>
+        <input type="password" name="textfield2" placeholder="Password" class="input-field" required>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <div class="links">
+        <a href="/volunteer_register">Register as Volunteer</a> |
+        <a href="/public_home">Go to Public Home</a>
+    </div>
+</div>
+
+</body>
+</html>

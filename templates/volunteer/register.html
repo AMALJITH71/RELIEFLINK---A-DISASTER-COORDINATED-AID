@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/volunteer_register_action" method="post" enctype="multipart/form-data">
+<table width="200" border="1">
+  <tr>
+    <th scope="row">Name</th>
+    <td><input type="text" name="name" id="textfield" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Email</th>
+    <td><input type="text" name="email" id="textfield2" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Phone</th>
+    <td><input type="text" name="phone" id="textfield3" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Pin</th>
+    <td><input type="text" name="pin" id="textfield4" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Post</th>
+    <td><input type="text" name="post" id="textfield5" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Place</th>
+    <td><input type="text" name="place" id="textfield6" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td><p>
+      <label>
+        <input type="radio" name="gender" value="male" id="RadioGroup1_0" />
+        male</label>
+      <br />
+      <label>
+        <input type="radio" name="gender" value="female" id="RadioGroup1_1" />
+        female</label>
+      <br />
+    </p></td>
+  </tr>
+  <tr>
+    <th scope="row">Image</th>
+    <td><input type="file" name="image" id="fileField" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Id proof</th>
+    <td><input type="file" name="proof" id="fileField2" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td><textarea name="skill" id="textarea" cols="45" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td><input type="text" name="age" id="textfield7" /></td>
+  </tr>
+<tr>
+    <th scope="row">password</th>
+    <td><input type="text" name="password" id="textfield7" /></td>
+  </tr>
+<tr>
+    <th scope="row">confirm password</th>
+    <td><input type="text" name="cpassword" id="textfield7" /></td>
+  </tr>
+  <tr>
+    <th scope="row">Camp</th>
+    <td><select name="camp" id="select">
+        {% for i in view %}
+        <option value="{{ i.id }}" >{{ i.camp_name }}</option>
+        {% endfor %}
+    </select></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="add" /></th>
+  </tr>
+</table>
+</form>
+</body>
+</html>

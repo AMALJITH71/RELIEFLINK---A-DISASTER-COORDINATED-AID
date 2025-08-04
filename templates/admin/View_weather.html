@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">S.no</th>
+    <th scope="col">Weather</th>
+    <th scope="col">date</th>
+    <th scope="col">Area</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+     {% for i in data %}
+  <tr>
+    <td>{{ forloop.counter }}&nbsp;</td>
+    <td>{{ i.Weather}}&nbsp;</td>
+    <td>{{ i.Date}}&nbsp;</td>
+    <td>{{ i.Area}}&nbsp;</td>
+    <td><a href="/updateweather/{{ i.id }}">Edit</a><br /><a href="/delete_weather/{{ i.id }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

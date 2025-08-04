@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="316" border="1">
+  <tr>
+    <th width="36" scope="col">S.no</th>
+    <th width="59" scope="col">Disaster Type</th>
+    <th width="51" scope="col">Death Count</th>
+    <th width="41" scope="col">Date</th>
+    <th width="95" scope="col">&nbsp;</th>
+  </tr>
+     {% for i in data %}
+  <tr>
+    <td>{{ forloop.counter }}&nbsp;</td>
+    <td>{{ i.DisasterType}}&nbsp;</td>
+    <td>{{ i.DeathCount}}&nbsp;</td>
+    <td>{{ i.Date}}&nbsp;</td>
+    
+    <td><a href="/updatedeath/{{ i.id }}">Edit</a><br /><a href="/delete_death/{{ i.id }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

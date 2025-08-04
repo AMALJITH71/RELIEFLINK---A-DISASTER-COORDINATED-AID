@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="row">S.no</th>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Gender</td>
+    <td>Image</td>
+    <td>Description</td>
+    <td rowspan="2">Report</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ forloop.counter }}&nbsp;</td>
+    <td>{{ i.Name}}&nbsp;</td>
+    <td>{{ i.Age}}&nbsp;</td>
+    <td>{{ i.Gender}}&nbsp;</td>
+      <td><img src="{{ i.Image }}" height="100" width="100" /> &nbsp;</td>
+      <td>{{ i.Description}}&nbsp;</td>
+
+    <td>
+
+    <a href="/report_missing_person_place/{{ i.id }}">Report</a>
+    </td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

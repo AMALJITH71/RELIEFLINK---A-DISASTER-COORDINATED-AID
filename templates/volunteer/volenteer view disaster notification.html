@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">sl.no</th>
+    <th scope="col">category</th>
+    <th scope="col">informations</th>
+    <th scope="col">area</th>
+    <th scope="col">Location</th>
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{ i.DisasterCategory }}</td>
+    <td>&nbsp;{{ i.information }}</td>
+    <td>&nbsp;{{ i.Area }}</td>
+    <td><a href="http://google.com/maps/?q={{ i.Latitude }}{{ i.Longitude }}">track</a> </td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

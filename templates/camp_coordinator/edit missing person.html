@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/edit_missing_person_post/{{ view.id }}" method="post" enctype="multipart/form-data">
+<table width="200" border="1">
+  <tr>
+    <th scope="row">name</th>
+    <td><input type="text" name="textfield" id="textfield" value="{{ view.Name }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">age</th>
+    <td><input type="text" name="textfield2" id="textfield2" value="{{ view.Age }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">gender</th>
+    <td><p>
+      <label>
+        <input type="radio" name="RadioGroup1" value="male" {% if view.Gender == 'male' %} checked{% endif %} id="RadioGroup1_0" />
+        male</label>
+      <br />
+      <label>
+        <input type="radio" name="RadioGroup1" value="female" {% if view.Gender == 'female' %} checked{% endif %}  id="RadioGroup1_1" />
+        female</label>
+      <br />
+    </p></td>
+  </tr>
+  <tr>
+    <th scope="row">image</th>
+    <td>
+        <img src="{{ view.Image }}" height="100" width="100"> <input type="file" name="fileField" id="fileField" /></td>
+  </tr>
+  <tr>
+    <th scope="row">discription</th>
+    <td><textarea name="textarea" id="textarea" cols="45" rows="5">{{ view.Description }}</textarea></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="edit" /></th>
+  </tr>
+</table>
+</form>
+</body>
+</html>

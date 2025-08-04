@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="315" border="1">
+  <tr>
+    <th width="47" scope="col">sl.no</th>
+    <th width="102" scope="col">missing person info</th>
+    <th width="44" scope="col">user info</th>
+    <th width="44" scope="col">place</th>
+    <th width="44" scope="col">date</th>
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;image:<img src="{{ i.MISSING_PERSON.Name }}" height="100" width="100"><br>
+        name:{{ i.MISSING_PERSON.Name }}<br></td>
+    <td>&nbsp;name:{{ i.USER.Name }}<br>email:{{ i.USER.Email }}</td>
+    <td>&nbsp;{{ i.place }}</td>
+    <td>&nbsp;{{ i.date }}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
