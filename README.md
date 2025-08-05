@@ -1,4 +1,4 @@
-## RELIEFLINK---A-DISASTER-COORDINATED-AID
+## RELIEFLINK--A-DISASTER-COORDINATED-AID
 
 This project aims to develop a comprehensive disaster management website tailored for state, designed to enhance coordination, communication, and resource management during emergencies. The website will serve as a central hub for coordinating resources, including volunteers, donations, and supplies, to streamline relief efforts and ensure efficient aid distribution. It will also focus on educating the public about disaster preparedness, response strategies, and recovery processes, fostering a proactive approach to community resilience.
 
@@ -7,6 +7,7 @@ Key features of the website will include real-time disaster notifications and da
 By integrating these features, the website will not only facilitate immediate disaster response and recovery but also empower communities to be better prepared for future emergencies. This project represents a significant step towards creating a safer, more resilient state, equipped to handle the challenges posed by natural and man-made disasters.
 
 SHORT DESCRIPTION
+
 A state-focused disaster management website to coordinate volunteers, donations, and supplies, with features like real-time alerts, weather updates, camp info, blockchain-based donation tracking, interactive maps, and a chatbox for reporting disasters and enhancing community response.
 
 INTERFACE
