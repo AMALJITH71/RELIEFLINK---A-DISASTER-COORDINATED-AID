@@ -1,8 +1,13 @@
 ## RELIEFLINK---A-DISASTER-COORDINATED-AID
 
-A state-focused disaster management website to coordinate volunteers, donations, and supplies, with features like real-time alerts, weather updates, camp info, blockchain-based donation tracking, interactive maps, and a chatbox for reporting disasters and enhancing community response.
+This project aims to develop a comprehensive disaster management website tailored for state, designed to enhance coordination, communication, and resource management during emergencies. The website will serve as a central hub for coordinating resources, including volunteers, donations, and supplies, to streamline relief efforts and ensure efficient aid distribution. It will also focus on educating the public about disaster preparedness, response strategies, and recovery processes, fostering a proactive approach to community resilience.
 
-ReliefLink is a web-based system designed to streamline disaster response by connecting volunteers, donors, affected communities, relief workers, and administrators into one integrated ecosystem. It provides real-time alerts, incident reporting, mapping, resource tracking, and transparency via blockchain.
+Key features of the website will include real-time disaster notifications and daily weather updates for all districts, as well as detailed information on emergency camps, their requirements, and ongoing relief activities. To ensure transparency and accountability in financial transactions, the platform will leverage blockchain technology to record all donations, preventing fraud and ensuring that each transaction is traceable.
+
+By integrating these features, the website will not only facilitate immediate disaster response and recovery but also empower communities to be better prepared for future emergencies. This project represents a significant step towards creating a safer, more resilient state, equipped to handle the challenges posed by natural and man-made disasters.
+
+SHORT DESCRIPTION
+A state-focused disaster management website to coordinate volunteers, donations, and supplies, with features like real-time alerts, weather updates, camp info, blockchain-based donation tracking, interactive maps, and a chatbox for reporting disasters and enhancing community response.
 
 INTERFACE
 ![Image Alt](https://github.com/AMALJITH71/RELIEFLINK---A-DISASTER-COORDINATED-AID/blob/4e8b51cce30f6a7ee622920ae89bdb979f12a76a/Screenshot%202025-03-24%20220359.png)
